@@ -1,0 +1,37 @@
+.calender-wrapper{
+
+    //min-height: calc(100vh - 9.75rem);
+
+    .MuiDateCalendar-root{
+        @apply sm:w-[28rem] sm:max-h-[initial];
+
+        .MuiPickersCalendarHeader-root{
+            @apply sm:mb-6;    
+        }
+
+        .MuiDayCalendar-weekDayLabel{
+            @apply sm:text-2xl text-white sm:w-14 sm:h-14;
+        }
+
+        .MuiDayCalendar-slideTransition{
+            @apply sm:min-h-[22rem]
+        }
+
+        .MuiPickersDay-root{
+            @apply sm:text-2xl text-taupe-gray sm:w-14 sm:h-14;
+
+            &.MuiPickersDay-today{
+                @apply text-white;
+
+                &:not(.Mui-selected){
+                    @apply border-white;
+                }
+
+            }
+
+            &.Mui-selected{
+                @apply text-white bg-secondary;
+            }
+        }
+    }
+}

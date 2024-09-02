@@ -1,0 +1,17 @@
+image: atlassian/default-image:3
+
+pipelines:
+  default:
+    - step:
+        name: 'Build and push Docker image'
+        services:
+          - docker
+        script:
+          - export LATEST_TAG=$(curl -s https://hub.docker.com/v2/repositories/sl4ught3r/transport-backend/tags?page_size=100 | jq -r '.results[].name' | sort -V | tail -n 1)
+          - export LATEST_MINOR_VERSION=$(echo $LATEST_TAG | grep -oE '^[0-9]+\.[0-9]+' | cut -d '.' -f 2)
+          - export NEW_MINOR_VERSION=$(($LATEST_MINOR_VERSION + 1))
+          - export NEW_TAG="1.$NEW_MINOR_VERSION"
+          - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+          - docker build -t sl4ught3r/transport-backend:$NEW_TAG .
+          - docker tag sl4ught3r/transport-backend:$NEW_TAG sl4ught3r/transport-backend:latest
+          - docker push sl4ught3r/transport-backend:$NEW_TAG

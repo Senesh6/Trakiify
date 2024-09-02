@@ -1,0 +1,36 @@
+.dialog-container{
+    @apply bg-primary  sm:w-[30rem] w-[90vw] rounded-2xl;
+
+    .dialog-btn{
+        @apply w-1/2 sm:w-auto;
+    }
+
+    .dialog-title{
+        @apply border-0 pb-0 px-6 pt-6 flex items-center;
+
+        svg{
+            @apply mr-3;
+        }
+    }
+
+    .dialog-switch-wrapper{
+        @apply flex flex-row justify-between items-center;
+
+        .dialog-switch-label{
+            @apply mb-0;
+        }
+
+        .dialog-date-input{
+            @apply w-1/2 bg-primary text-white text-right;
+
+            input{
+                @apply  text-white text-right pr-2;
+            }
+
+            input{
+                -webkit-text-fill-color: #fff;
+            }
+        }
+    }
+
+}

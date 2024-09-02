@@ -1,0 +1,21 @@
+.utilize-wrapper{
+    @apply font-extrabold;
+
+    .switch-wrapper{
+        @apply flex flex-row justify-between items-center;
+
+        .switch-label{
+            @apply mb-0;
+        }
+
+        .date-input{
+            @apply w-1/2 bg-primary text-white text-right;
+
+            input{
+                @apply  text-white text-right pr-2;
+                -webkit-text-fill-color: #fff;
+            }
+        }
+    }
+
+}

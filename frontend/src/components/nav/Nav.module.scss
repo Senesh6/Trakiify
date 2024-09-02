@@ -1,0 +1,7 @@
+.menuItem{
+    @apply min-w-[8rem] font-medium text-xl text-white flex items-center ;
+
+    svg{
+        @apply w-[1.75rem] h-[1.75rem] mr-3;
+    }
+}

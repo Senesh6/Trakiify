@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    @apply font-sans #{!important};
+}
+
+*{
+    @apply text-white;
+}
+
+html{
+    @apply font-sans md:text-base sm:text-sm text-xs;
+
+    @media (-webkit-device-pixel-ratio: 1.25) {
+        @apply text-sm;
+    }
+}
+
+body{
+    @apply bg-primary #{!important};
+}
+
+.router-link{
+    @apply no-underline;
+}
+
+.home-container{
+    min-height: calc(100vh - 112px);
+    max-height: calc(100vh - 112px);
+    height: calc(100vh - 112px);
+    overflow: hidden;
+
+}
+
+.uti-table{
+    .MuiInput-root {
+        .MuiInputBase-input{
+            @apply p-2 text-sm;
+        }
+    }
+}
+
+.onHide{
+    @apply hidden;
+}
+
+.onShow{
+    @apply flex;
+}
+
+.admin-report{
+    .simplebar-content-wrapper{
+        @apply h-full #{!important};
+    }
+}

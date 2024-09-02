@@ -1,0 +1,38 @@
+{
+  "name": "transport-backend",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Transport backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sl4ught3r@bitbucket.org/corerez/transport-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/corerez/transport-backend/issues"
+  },
+  "homepage": "https://bitbucket.org/corerez/transport-backend#readme",
+  "dependencies": {
+    "@vercel/node": "^3.0.7",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.5",
+    "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
